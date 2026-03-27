@@ -395,6 +395,26 @@
 
     .project-link:hover { color: var(--accent); }
 
+    /* ─── PHOTOS ───────────────────────────────────────────────────── */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .photo-card {
+      border: 1px solid var(--light);
+      overflow: hidden;
+      background: var(--off);
+    }
+
+    .photo-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+
     /* ─── CONTACT ─────────────────────────────────────────────────── */
     .contact-inner {
       max-width: 560px;
@@ -461,6 +481,7 @@
     @media (max-width: 640px) {
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .projects-grid { grid-template-columns: 1fr; }
+      .photo-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
     }
   </style>
@@ -476,6 +497,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#photos">Photos</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -536,6 +558,26 @@
             <div class="fact-value">Internships &amp; part-time roles</div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── PHOTOS ─────────────────────────────────────────────────────── -->
+  <section id="photos">
+    <div class="container">
+      <p class="section-label">Photos</p>
+      <div class="photo-grid fade-in">
+        <figure class="photo-card">
+          <img src="pic1.jpeg" alt="Portrait photo" />
+        </figure>
+        <figure class="photo-card">
+          <img src="IMG_0868.jpg" alt="City and architecture photo" />
+        </figure>
+        <figure class="photo-card">
+          <img src="pic2.jpeg" alt="Ocean sunset photo" />
+        </figure>
       </div>
     </div>
   </section>
